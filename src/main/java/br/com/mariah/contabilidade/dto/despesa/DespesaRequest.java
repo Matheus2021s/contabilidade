@@ -10,7 +10,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class DespesaDTO {
+public class DespesaRequest {
 
     @NotNull(message = "O valor não pode ser nulo")
     @JsonProperty(value = "valor")
