@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+@ToString
 @Getter
 @Setter
 @AllArgsConstructor
@@ -23,4 +24,9 @@ public class Despesa {
     private Double valor;
 
     private LocalDateTime dataHorario;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
+
 }

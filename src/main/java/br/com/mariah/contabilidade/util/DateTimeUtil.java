@@ -1,6 +1,6 @@
 package br.com.mariah.contabilidade.util;
 
-import br.com.mariah.contabilidade.exceptions.UnparsableValueExcpetion;
+import br.com.mariah.contabilidade.exceptions.UnparsableValueException;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,7 +17,7 @@ public class DateTimeUtil {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATA_HORA_PATTERN);
             return LocalDateTime.parse(dataHorario, formatter);
         } catch (Exception e) {
-            throw new UnparsableValueExcpetion("Não foi possivel parsear o valor %s".formatted(dataHorario));
+            throw new UnparsableValueException("Não foi possivel parsear o valor %s".formatted(dataHorario));
         }
     }
 }
